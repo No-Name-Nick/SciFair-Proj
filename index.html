@@ -7,13 +7,17 @@
                 margin: 0;
                 padding: 0;
                 font-family: Arial, sans-serif;
+                background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/253479729_579282593382261_7779420699928113424_n.png?stp=dst-png_p206x206&_nc_cat=107&ccb=1-7&_nc_sid=aee45a&_nc_eui2=AeEKeaaAMumTT439Kt4RL4xRsLxNDAO9clmwvE0MA71yWdqLjEhGguR655K_v05Y0lQFjdwWUyMTgfBGGpy1Gqw7&_nc_ohc=lEGrQlSro8EAX8ZBo5B&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdS13QcwIz86pTgAzm6vRclKafvCI7IIwEgFfl1dFt1qjA&oe=6466234E');
+                overflow-x: hidden;
             }
             .container {
                 display: grid;
                 grid-template-columns: 1fr 3fr;
                 grid-template-rows: auto 1fr;
-                height: 100vh;
+                height: 100%;
                 text-align: center;
+                row-gap: 20px;
+                opacity: 80%; /*Change this*/
             }
             header {
                 grid-column: 1 / span 2;
@@ -28,19 +32,25 @@
             nav {
                 padding: 20px;
                 background-color: #e0e0e0;
-                position: sticky; /* Added sticky position */
-                top: 0; /* Sticks to the top of the page */
-                width: 150px; /* Updated width */
-            }
-            .Greyer:hover {
-                background-color: grey;
+                position: sticky;
+                top: 0;
+                width: 150px;
             }
             .body {
                 padding: 20px;
-                overflow-y: auto;
+                overflow-y: scroll;
+                height: 1000vh;
+            }
+            #bodypartofpage {
+                background-color: beige;
+                position: relative;
+                left: 20px;
+                width: 85vw;
             }
             a {
                 cursor: pointer;
+                text-decoration: none;
+                color: black;
             }
             .uncenter{
                 text-align: left;
@@ -57,6 +67,10 @@
             #randomthingthatneedstobeedited {
                 width: 130px;
             }
+            #thisoneismovedtoright {
+                position: relative;
+                left: 10vw;
+            }
         </style>
     </head>
     <body>
@@ -69,22 +83,31 @@
             <nav>
                 <div id="fixedspot">
                     <h1 id="randomthingthatneedstobeedited">Navigation Bar</h1>
-                    <a class="Greyer">Abstract</a><br><br>
-                    <a class="Greyer">Introduction</a><br><br>
-                    <a class="Greyer">Body</a><br><br>
-                    <a class="Greyer">Conclusions</a><br><br>
-                    <a class="Greyer">Sources</a>
+                    <a href="#abstract">Abstract</a><br><br>
+                    <a href="#introduction">Introduction</a><br><br>
+                    <a href="#bodyB">Body</a><br><br>
+                    <a>Conclusions</a><br><br>
+                    <a>Sources</a>
                 </div>
             </nav>
-            <div class="intro">
-                <h2 class="abittotheleft">Introduction</h2>
+            <div id="bodypartofpage">
+                <div id="thisoneismovedtoright">
+                    <h2 class="abittotheleft" id="abstract">Abstract</h2>
                 <div class="uncenter">
                     <p>&nbsp &nbsp &nbsp &nbsp &nbsp The invention of the Closed-Circuit Television, also known as CCTV, by Walter Bruch in 1942, was first used to monitor V-2 rockets during World War II. Nowadays, this device monitors, prevents, and reduces criminal activity in business establishments, houses, and other places. It is proven effective as the camera provides evidence of crimes, which allows security organizations to track the culprit more efficiently and results in a psychological effect that reminds people of security measures (Kelly, 2012). Thus, the presence of the CCTV camera helps to eliminate the fear of citizens that a crime will happen, giving a better sense of security and protection. However, surveillance footage from CCTV drives are poor in quality and have low resolution. Aside from this, CCTV cameras are short ranged devices and can only view limited spaces and short distances. </p>
                     <p>&nbsp &nbsp &nbsp &nbsp &nbsp The Aquila Chrysaetos, commonly known as the eagle, is considered to have the best vision within the animal kingdom. Compared to humans, with perfect eyesight of 20/20, Eagles' standard is 20/5, meaning it can see at a distance of 20 feet what a human with 20/20 vision would need to be at a distance of 5 feet to see. To add to their impeccable visual acuity, Eagles also have better color and near panoramic vision, among other visual qualities, meaning that their eyesight is at least four times better than humans. This is because their eyes have structures and modifications better suited for their environment, giving them an advantage over other animals (2021).</p>
-                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp Due to the advanced structures eagle eyes have compared to a human's eye, we can use the similarities between the CCTV camera and a human's eye (ex: structure of the lens, memory space, among others). Thus, we aim to modify the CCTV camera to achieve better quality by using the likeness of an eagle's eye.
+                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp Due to the advanced structures eagle eyes have compared to a human's eye, we can use the similarities between the CCTV camera and a human's eye (ex: structure of the lens, memory space, among others). Thus, we aim to modify the CCTV camera to achieve better quality by using the likeness of an eagle's eye.</p>
                 </div>
-                <h2 class="abittotheleft">Body</h2>
+                <h2 class="abittotheleft" id="introduction">Introduction</h2>
                 <div class="uncenter">
+                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp The invention of the Closed-Circuit Television, also known as CCTV, by Walter Bruch in 1942, was first used to monitor V-2 rockets during World War II. Nowadays, this device monitors, prevents, and reduces criminal activity in business establishments, houses, and other places. It is proven effective as the camera provides evidence of crimes, which allows security organizations to track the culprit more efficiently and results in a psychological effect that reminds people of security measures (Kelly, 2012). Thus, the presence of the CCTV camera helps to eliminate the fear of citizens that a crime will happen, giving a better sense of security and protection. However, surveillance footage from CCTV drives are poor in quality and have low resolution. Aside from this, CCTV cameras are short ranged devices and can only view limited spaces and short distances. </p>
+                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp The Aquila Chrysaetos, commonly known as the eagle, is considered to have the best vision within the animal kingdom. Compared to humans, with perfect eyesight of 20/20, Eagles' standard is 20/5, meaning it can see at a distance of 20 feet what a human with 20/20 vision would need to be at a distance of 5 feet to see. To add to their impeccable visual acuity, Eagles also have better color and near panoramic vision, among other visual qualities, meaning that their eyesight is at least four times better than humans. This is because their eyes have structures and modifications better suited for their environment, giving them an advantage over other animals (2021).</p>
+                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp Due to the advanced structures eagle eyes have compared to a human's eye, we can use the similarities between the CCTV camera and a human's eye (ex: structure of the lens, memory space, among others). Thus, we aim to modify the CCTV camera to achieve better quality by using the likeness of an eagle's eye.</p>
+                </div>
+                <h2 class="abittotheleft" id="bodyB">Body</h2>
+                <div class="uncenter">
+                    <p>&nbsp &nbsp &nbsp &nbsp &nbsp An Eagle's eye is deemed better than a human eye because of several factors related to its structure. An example is its high-density photoreceptor cells, such as cone and rod cells, in their retinas responsible for detecting light and transmitting visual information to the brain. The foveas, small areas in the retina, contain a high concentration of these cells, allowing eagles to perceive fine details and distinguish colors at long distances. Compared to humans, eagles have multiple foveas with around a million photoreceptor cells per square millimeter, while humans only have a single fovea comprising 200 thousand photoreceptor cells per square millimeter, which makes them better at perceiving details than us. Secondly, the lens of an eagle's eye is also larger in proportion to its body size than in most other animals, allowing more light to enter the eye. This is important for seeing in low-light conditions and enhances the sharpness of their vision. Aside from size, the shape of their lenses is also unique and more spherical than in most other birds of prey, reducing spherical aberration, which is a distortion of the image that can occur when light passes through a curved surface. They can also change the shape of their lenses and corneas through accommodation, making them thinner to focus on far objects and thicker to focus on near objects. In addition, their eyes also have a good blood supply, which helps maintain the health of the photoreceptor cells in the foveas. Together, these factors contribute to the excellent resolution of an eagle's eye, allowing it to see with much greater clarity and detail than humans. By studying these features of the eagle eye, researchers can gain insights into improving the resolution of cameras and other imaging technologies.</p>
+                </div>
                 </div>
             </div>
         </div>
